@@ -10,6 +10,7 @@
 		5643671821804EC10051EC69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643671721804EC10051EC69 /* main.m */; };
 		5643672021804EF10051EC69 /* HPPerson1.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643671F21804EF10051EC69 /* HPPerson1.m */; };
 		5643672621805F240051EC69 /* HPPerson2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5643672521805F240051EC69 /* HPPerson2.m */; };
+		564367292181A0BF0051EC69 /* HPPerson3.m in Sources */ = {isa = PBXBuildFile; fileRef = 564367282181A0BF0051EC69 /* HPPerson3.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		5643671F21804EF10051EC69 /* HPPerson1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPerson1.m; sourceTree = "<group>"; };
 		5643672421805F240051EC69 /* HPPerson2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPerson2.h; sourceTree = "<group>"; };
 		5643672521805F240051EC69 /* HPPerson2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPerson2.m; sourceTree = "<group>"; };
+		564367272181A0BF0051EC69 /* HPPerson3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPPerson3.h; sourceTree = "<group>"; };
+		564367282181A0BF0051EC69 /* HPPerson3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HPPerson3.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				5643671F21804EF10051EC69 /* HPPerson1.m */,
 				5643672421805F240051EC69 /* HPPerson2.h */,
 				5643672521805F240051EC69 /* HPPerson2.m */,
+				564367272181A0BF0051EC69 /* HPPerson3.h */,
+				564367282181A0BF0051EC69 /* HPPerson3.m */,
 			);
 			path = HPMaskDemo;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564367292181A0BF0051EC69 /* HPPerson3.m in Sources */,
 				5643672021804EF10051EC69 /* HPPerson1.m in Sources */,
 				5643671821804EC10051EC69 /* main.m in Sources */,
 				5643672621805F240051EC69 /* HPPerson2.m in Sources */,

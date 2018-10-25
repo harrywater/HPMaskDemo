@@ -7,19 +7,21 @@
 //
 
 #import "HPPerson2.h"
-#define oldMask (1<<0)
-#define tallMask (1<<1)
-#define fatMask (1<<2)
 
 @implementation HPPerson2
 {
-    char _oldTallFat; //一个字节存放
+    //定义一个结构体（1个字节大小） 利用位域来存储
+    struct DD{
+        char old  :1;//最低位(最右边开始) 一个位bit
+        char tall :1;
+        char fat  :1;
+    }_oldTallFat;
 }
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _oldTallFat = 0b00000000;//初始化
+        NSLog(@"结构体大小：%lu",sizeof(_oldTallFat));
     }
     return self;
 }
@@ -29,42 +31,31 @@
  */
 
 //=============设值运算========
+
+- (void)setOld:(BOOL)old
+{
+    _oldTallFat.old = old;//BOOL 值 [0,1]
+}
 - (void)setTall:(BOOL)tall
 {
-    if (tall) {
-        _oldTallFat |= tallMask;
-    }else{
-        _oldTallFat &= (~tallMask);
-    }
+    _oldTallFat.tall = tall;
 }
 - (void)setFat:(BOOL)fat
 {
-    if (fat) {
-        _oldTallFat |= fatMask;
-    }else{
-        _oldTallFat &= (~fatMask);
-    }
-}
-- (void)setOld:(BOOL)old
-{
-    if (old) {
-        _oldTallFat |= oldMask;
-    }else{
-        _oldTallFat &= (~oldMask);
-    }
+    _oldTallFat.fat = fat;
 }
 
 //================取值==========
 - (BOOL)isOld
 {
-    return !!(_oldTallFat&oldMask);
+    return !!(_oldTallFat.old);
 }
 - (BOOL)isFat
 {
-    return !!(_oldTallFat&fatMask);
+    return !!(_oldTallFat.fat);
 }
 - (BOOL)isTall
 {
-    return !!(_oldTallFat&tallMask);
+    return !!(_oldTallFat.tall);
 }
 @end
